@@ -1,0 +1,248 @@
+/* globales */
+:root{
+    --fuentePrincipal: 'Open Sans', sans-serif;
+    --fuenteHeadings: 'Raleway', sans-serif;
+
+    /*Colores*/
+    --rojo: #a61206;
+    --naranja: #f19f30;
+    --verde: #127427;
+    --blanco: #ffffff;
+    --negro: #000000;
+    --grisClaro: #c1c1c1;
+    
+    --contenedor: 1300px;
+}
+
+.cajas-nosotros{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.cajas-nosotros .wp-block-column{
+    /* grid-template-rows: repeat(auto-fit, minmax(100px, 1fr)); */
+    margin: 0;
+}
+.box{
+    height: 24rem;
+    padding: 4rem;
+    text-align: center;
+    display: grid;
+    align-items: center;
+}
+.box h2{
+    font-size: 2rem;
+    margin: 0;
+    line-height: 1;
+    font-weight: 700;
+}
+.box p{
+    font-size: 1.4rem;
+    line-height: 1.5;
+
+}
+
+.wp-block-image{
+    margin: 0;
+    height: 24rem;
+}
+.cajas-nosotros img{
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+@media (min-width: 768px){
+    .cajas-nosotros{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        margin: 0 auto;
+    }
+}
+
+/* bloque menú */
+.titulo-menu{
+    color: var(--rojo);
+    font-family: var(--fuentePrincipal);
+    text-align: left;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.nuestro-menu li{
+    margin-bottom: 2rem !important;
+
+}
+.precio-titulo{
+    border-bottom: 1px solid #dfdfdd;
+    padding-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+.precio-titulo h3{
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2.2rem;
+}   
+.precio-titulo p{
+    color: var(--naranja);
+    font-family: var(--fuentePrincipal);
+    font-weight: 700;
+    font-size: 2.4rem !important;
+    margin: 0;
+}
+.contenido-platillo p{
+    color: #3d3d3d;
+    line-height: 2;
+    font-size: 1.2rem !important;
+    font-family: var(--fuenteHeadings);
+    text-align: left;
+}
+.container-plato img{
+    max-height: 35rem;
+    object-fit: cover;
+}
+@media (min-width: 768px){
+    .nuestro-menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        list-style: none !important;
+        padding: 0;
+        margin: 0;
+    }
+    .nuestro-menu li{
+        flex: 0 0 calc(50% - 2rem);
+    }
+
+}
+
+/* galeria */
+
+.galeria-pizzeria > h2{
+    color: var(--rojo) !important;
+    font-weight: 700;
+}
+ul.listado-imagenes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    list-style: none;
+    margin-top: 3rem;
+    grid-gap: 2rem;
+}
+.imagen img{
+    display: block;
+}
+
+/* hero block */
+.hero-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background-size: cover;
+}
+.hero-block h1{
+    color: var(--blanco);
+    margin: .5rem;
+    width: 100%
+}
+.hero-block p{
+    color: var(--blanco);
+    margin: .5rem;
+    width: 100%;
+}
+.hero-block > div{
+    width: 100%;
+}
+.hero-block.full{
+    margin: 0 calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
+
+}
+
+.contenido-hero{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* texto e imagen block */
+.ingredientes-bloque{
+    background-size: cover;
+    padding: 8rem 2rem;
+}
+.texto-ingredientes h1,
+.texto-ingredientes p{
+    color: var(--blanco);
+}
+.ingredientes-bloque.full, .alignfull {
+    margin: 0 calc(50% - 50vw);
+    max-width: 100vw;
+    width: 100vw;
+}
+
+.contenido-ingredientes{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+@media (min-width: 768px){
+    .contenido-ingredientes{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 2rem;
+        
+    }
+}
+
+
+/* bloque contenedor */
+.bloque-contenedor{
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+.contenido-bloque{
+    /* padding: 10rem 0; */
+}
+.bloques-internos{
+    padding: 3rem;
+    /* margin: 2rem; */
+    background-color: rgba(255,255,255, .8);
+}
+@media (min-width: 768px){
+    .contenido-bloque{
+        min-height: 80rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+    }
+    .wpcf7-form{
+        min-width: 40rem;
+    }
+    .bloques-internos{
+        /* grid-column: 2 / 3; */
+    }
+}
+.wpcf7-form{
+}
+.wpcf7-form p label{
+    font-size: 2rem;
+}
+
+.wpcf7-form-control{
+    padding: 2rem;
+    border: 1px solid var(--grisClaro);
+    width: 100%;
+}
+.btn-submit{
+
+}
+
+.mapa-leaf-title{
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--rojo);
+}
